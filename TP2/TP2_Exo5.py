@@ -11,13 +11,12 @@ def check(nb:float) -> str:
         return 'negatif impair'
 
 while True:
-    while True:
         try:
-            choice = float(input("Choisissez un nombre ou q pour quitter : "))
-            break
+            choice = (input("Choisissez un nombre ou q pour quitter : "))
+            if choice == 'q' or choice == 'Q':
+                break
+            else:
+                choice = float(choice)
+                print(check(choice))
         except ValueError:
             print('Valeur invalide')
-    if choice == "q" or choice == 'Q':
-        break
-    else:
-        print(check(choice))
